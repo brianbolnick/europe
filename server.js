@@ -1,7 +1,6 @@
 var express = require('express');
 const path = require('path');
 var bodyParser = require('body-parser');
-const passport = require('passport');
 const config = require('./config');
 var cors = require('cors');
 
@@ -24,10 +23,7 @@ app.use(bodyParser.json());
 
 // CORS stuff
 var allowedOrigins = [
-    'http://localhost:3000',
-    'icpm.herokuapp.com',
-    'https://icpm.herokuapp.com',
-    'http://icpm.herokuapp.com'
+    'http://localhost:3000'
 ];
 app.use(cors({
     origin: function (origin, callback) {
@@ -41,24 +37,7 @@ app.use(cors({
     }
 }));
 
-
-// passport middleware
-app.use(passport.initialize());
-
-// load passport strategies
-const localSignupStrategy = require('./server/passport/local-signup');
-const localLoginStrategy = require('./server/passport/local-login');
-passport.use('local-signup', localSignupStrategy);
-passport.use('local-login', localLoginStrategy);
-
-// pass the authenticaion checker middleware
-const authCheckMiddleware = require('./server/middleware/auth-check');
-app.use('/api', authCheckMiddleware);
-
 // Routes
-const authRoutes = require('./server/routes/auth-routes');
-app.use('/auth', authRoutes);
-
 const apiRoutes = require('./server/routes/api-routes');
 app.use('/api', apiRoutes);
 

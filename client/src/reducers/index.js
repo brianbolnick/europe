@@ -1,16 +1,8 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
-import LoginReducer from './login_reducer';
-import SignupReducer from './signup_reducer';
-import ProjectReducer from './project_reducer';
-import ContactReducer from './contact_reducer';
-import { reducer as formReducer } from 'redux-form';
+import ExampleReducer from './example_reducer';
 
 export default combineReducers({
     routing: routerReducer,
-    form: formReducer,
-    signup: SignupReducer,
-    login: LoginReducer,
-    project: ProjectReducer,
-    contacts: ContactReducer
+    example: ExampleReducer
 });
