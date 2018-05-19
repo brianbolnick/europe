@@ -193,3 +193,21 @@ input.add-todo {
   overflow: hidden;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2);
 }
+
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+  .container {
+    min-height: 30vh;
+    height: 100%;
+    flex-flow: column-reverse;
+    justify-content: space-between;
+  }
+
+  .todos {
+    width: 100%;
+  }
+
+  .countdown {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
