@@ -24,8 +24,8 @@ app.use(bodyParser.json());
 // CORS stuff
 var allowedOrigins = [
     'http://localhost:3000',
-    'https://our-europe-trip.herokuapp.com/',
-    'http://our-europe-trip.herokuapp.com/'
+    'https://our-europe-trip.herokuapp.com',
+    'http://our-europe-trip.herokuapp.com'
 ];
 app.use(cors({
     origin: function (origin, callback) {
