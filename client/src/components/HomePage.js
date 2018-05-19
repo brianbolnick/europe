@@ -12,7 +12,9 @@ class HomePage extends Component {
 
   handleSubmit = (e) => {
     if (e.key === "Enter") {
-      this.props.addNewTodo(e.target.value);
+      const data = {};
+      data.description = e.target.value
+      this.props.addNewTodo(data);
     }
   }
 
@@ -26,7 +28,7 @@ class HomePage extends Component {
   }
 
   render() {
-    const { todos: { data, error, fetching } } = this.props;    
+    const { todos: { data, error, fetching } } = this.props;
     const todos = data.map(todo => {
       return (
         <TodoItem
@@ -36,7 +38,7 @@ class HomePage extends Component {
           toggleTodoStatus={() => this.handleTodoCheck(todo._id)}
         />
       )
-    })    
+    })
 
     return (
       <div className="home-page">

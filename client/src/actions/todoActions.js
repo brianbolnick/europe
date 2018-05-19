@@ -34,8 +34,9 @@ export const toggleTodoStatus = (id) => (dispatch, getState) => {
     })
 }
 
-export const addNewTodo = (data) => (dispatch, getState) => {
-    axios.post(`${API_URL}/api/todos`, { description: data }, config).then(response => {
+export const addNewTodo = (data) => (dispatch, getState) => {    
+    console.log(data)
+    axios.post(`${API_URL}/api/todos`, data, config).then(response => {
         if (response.data.error) {
             console.log("found error creating todo: ", response.data.error)
             dispatch({
