@@ -39,7 +39,6 @@ router.route('/todos')
     });
 
 router.put('/todos/:todo', function (req, res, next) {
-    req.body = JSON.parse(Object.keys(req.body)[0]);
     var todo_id = req.params.todo;    
     Todo.findById(todo_id, function (err, todo) {
         if (err) { res.send(err); }

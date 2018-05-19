@@ -10,8 +10,7 @@ import axios from 'axios';
 const config = { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
 
 export const toggleTodoStatus = (id) => (dispatch, getState) => {    
-    console.log("action id", id)
-    axios.put(`${API_URL}/api/todos/${id}`, config).then(response => {
+    axios.put(`${API_URL}/api/todos/${id}`, {}, config).then(response => {
         if (response.data.error) {
             console.log("found error updating todo: ", response.data.error)
             dispatch({
@@ -34,8 +33,7 @@ export const toggleTodoStatus = (id) => (dispatch, getState) => {
     })
 }
 
-export const addNewTodo = (data) => (dispatch, getState) => {    
-    console.log(data)
+export const addNewTodo = (data) => (dispatch, getState) => {        
     axios.post(`${API_URL}/api/todos`, data, config).then(response => {
         if (response.data.error) {
             console.log("found error creating todo: ", response.data.error)
