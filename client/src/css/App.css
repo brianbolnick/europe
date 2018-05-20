@@ -23,6 +23,10 @@
   box-shadow: 0px 2px 11px 0px #2121211f;
 }
 
+.todo-item:hover {
+  background: #d7d7d733;
+}
+
 input.add-todo {
   position: relative;
   margin: 0;
