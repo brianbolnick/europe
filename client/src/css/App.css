@@ -2,7 +2,9 @@
   min-height: 100vh;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 2rem;
-  background: linear-gradient(127.99666187244202deg, rgba(246, 245, 245,1) 29.23511904761905%,rgba(220, 220, 220,1) 75.05059523809524%);
+  /* background: linear-gradient(127.99666187244202deg, rgba(246, 245, 245,1) 29.23511904761905%,rgba(220, 220, 220,1) 75.05059523809524%); */
+  background: #06beb6;  /* fallback for old browsers */
+  background: linear-gradient(to right, #48b1bf, #06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .container {
@@ -60,11 +62,15 @@ input.add-todo {
 }
 
 .countdown {
-  width: 40%;
+  width: 100%;
   background-color: #fff;
-  padding: 60px 15px;
+  padding: 35px 15px;
   border-radius: 5px;
   box-shadow: 0px 2px 11px 0px #2121211f;
+}
+
+.right-side {
+  width: 40%;
 }
 
 .spacer {
@@ -198,6 +204,116 @@ input.add-todo {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2);
 }
 
+.countdown-title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+.flight-info-container {
+  margin-top: 15px;
+  margin-bottom: 15px;  
+  background-color: #fff;
+  /* padding: 35px 15px; */
+  border-radius: 5px;
+  box-shadow: 0px 2px 11px 0px #2121211f;
+  width: calc(100% + 35px);
+}
+.flight-info-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.flight-info-header:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 250%;
+  top: -65%;
+  left: 0;
+  z-index: 1;
+  transform: rotate(21deg);
+  background-image: url('../img/plane.png');
+  background-repeat: no-repeat;
+  background-size: 225px 195px;
+  background-position: center;
+  opacity: 0.2;
+  background-color: #d7d7d7;
+}
+
+.header-date {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #828282;
+  letter-spacing: 0.1rem;
+}
+
+.header-left-group {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.header-cities {
+  font-weight: 100;
+  font-size: 1.9rem;
+  text-align: left;
+}
+
+/* Place Holder CSS */
+::-webkit-input-placeholder {
+  color: #000;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:-moz-placeholder {
+  color: #000;
+  opacity: 0.5;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+::-moz-placeholder {
+  color: #000;
+  opacity: 0.5;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:-ms-input-placeholder {  
+  color: #000;
+  opacity: 0.5;
+  -ms-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
+/* Place Holder CSS for Focus */
+:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transform: translate(70%);
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+:focus:-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:focus:-ms-input-placeholder {  
+  opacity: 0;
+  -ms-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
+/* Mobile */
 @media only screen and (max-width: 767px) and (min-width: 320px) {
   .container {
     min-height: 30vh;
@@ -210,8 +326,7 @@ input.add-todo {
     width: 100%;
   }
 
-  .countdown {
+  .right-side {
     width: 90%;
-    margin-bottom: 20px;
   }
 }

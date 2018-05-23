@@ -79,6 +79,9 @@ class Countdown extends Component {
 
     return (
       <div className="Countdown">
+        <div className="countdown-title">
+          Time until Flight
+        </div>
         <span className="Countdown-col">
           <span className="Countdown-col-element">
               <strong>{this.addLeadingZeros(countDown.days)}</strong>
