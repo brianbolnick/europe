@@ -5,7 +5,8 @@
   /* background: linear-gradient(127.99666187244202deg, rgba(246, 245, 245,1) 29.23511904761905%,rgba(220, 220, 220,1) 75.05059523809524%); */
   background: #06beb6;
   /* fallback for old browsers */
-  background: linear-gradient(to right, #48b1bf, #06beb6); 
+  /* background: linear-gradient(to right, #48b1bf, #06beb6);  */
+  background: linear-gradient(115.62291889406674deg, rgba(248, 198, 215, 1) 5.272159428911362%, rgba(175, 233, 249, 1) 97.18173706127305%);
 }
 
 .container {
@@ -342,7 +343,7 @@ input.add-todo {
 .header-status {
   width: 25px;
   height: 100%;
-  background: #40C9A2;
+  background: #00CC99;
   color: #fff;
   font-size: 1.6rem;
   display: flex;
@@ -480,12 +481,26 @@ span.flight-separator-text {
   font-size: 1rem;
   text-transform: uppercase;
   padding: 10px;
-  background: #06beb6;
+  /* background: #06beb6; */
   border: solid 1px #fff;
   border-radius: 4px;
   margin-bottom: -67px;
   color: #fff;
   font-weight: 100;
+  background: #c7dfef;
+}
+
+input.add-todo:focus {
+  outline: none;
+  border-bottom: solid 3px #E76F51;
+}
+
+span.countdown-label {
+  font-weight: 100;
+}
+
+.separator-container {
+  width: calc(100% + 35px);
 }
 
 /* Mobile */
@@ -519,5 +534,74 @@ span.flight-separator-text {
   img.flight-img {
     width: 60px;
     vertical-align: bottom;
+  }
+  span.flight-separator-text {
+    position: relative;
+    bottom: 33px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 10px;
+    border: solid 1px #fff;
+    border-radius: 4px;
+    margin-bottom: -67px;
+    color: #fff;
+    font-weight: 100;
+    background: #dbd5e6;
+  }
+  .countdown {
+    width: calc(100% + 5px);
+  }
+}
+
+/* tablet */
+
+@media only screen and (max-width: 1330px) and (min-width: 768px) {
+  .container {
+    min-height: 30vh;
+    height: 100%;
+    flex-flow: column-reverse;
+    justify-content: space-between;
+  }
+  .countdown {
+    width: calc(100% - 30px);
+  }
+  .todos {
+    width: 100%;
+  }
+  .right-side {
+    width: 100%;
+  }
+  .flight-group-left {
+    display: flex;
+    width: 95%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px 0;
+  }
+  .flight-group {
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  img.flight-img {
+    width: 60px;
+    vertical-align: bottom;
+  }
+  span.flight-separator-text {
+    position: relative;
+    bottom: 33px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 10px;
+    border: solid 1px #fff;
+    border-radius: 4px;
+    margin-bottom: -67px;
+    color: #fff;
+    font-weight: 100;
+    background: #dbd5e6;
+  }
+  .flight-info-container {
+    width: 100%;
   }
 }

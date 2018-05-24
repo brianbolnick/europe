@@ -23,7 +23,7 @@ export default function (state = INITIAL_STATE, action) {
         case UPDATE_TODO_STATUS:
             let newData = JSON.parse(JSON.stringify(state.data))            
             newData.forEach(todo => {
-                if(todo._id == action.payload._id) {
+                if(todo._id === action.payload._id) {
                     todo.status = action.payload.status
                 }
             });

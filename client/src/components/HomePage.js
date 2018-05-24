@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Countdown from './Countdown'
-import Checkbox from './common/Checkbox/Checkbox';
 import TodoItem from './common/TodoItem/TodoItem';
 import { connect } from 'react-redux'
 import { addNewTodo, fetchTodos, toggleTodoStatus } from '../actions/todoActions'
@@ -30,7 +29,7 @@ class HomePage extends Component {
   }
 
   render() {
-    const { todos: { data, error, fetching } } = this.props;
+    const { todos: { data } } = this.props;
     const todos = data.map(todo => {
       return (
         <TodoItem
@@ -71,8 +70,10 @@ class HomePage extends Component {
             <div className="flight-info-container">
               <DepartingFlightInfo />
             </div>
-            <div className="flight-info-separator"></div>
+            <div className="separator-container">
+              <div className="flight-info-separator"></div>
               <span className='flight-separator-text'>August 22 - August 30</span>
+            </div>
             <div className="flight-info-container">
               <ReturningFlightInfo />
             </div>
