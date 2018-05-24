@@ -72,7 +72,7 @@ class HomePage extends Component {
             </div>
             <div className="separator-container">
               <div className="flight-info-separator"></div>
-              <span className='flight-separator-text'>August 22 - August 30</span>
+              <span className='flight-separator-text'>Ireland - London - Paris</span>
             </div>
             <div className="flight-info-container">
               <ReturningFlightInfo />
