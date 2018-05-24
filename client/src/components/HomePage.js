@@ -4,7 +4,8 @@ import Checkbox from './common/Checkbox/Checkbox';
 import TodoItem from './common/TodoItem/TodoItem';
 import { connect } from 'react-redux'
 import { addNewTodo, fetchTodos, toggleTodoStatus } from '../actions/todoActions'
-import FlightInfo from './FlightInfo';
+import DepartingFlightInfo from './DepartingFlightInfo';
+import ReturningFlightInfo from './ReturningFlightInfo';
 
 class HomePage extends Component {
   state = {
@@ -68,7 +69,12 @@ class HomePage extends Component {
               <Countdown date={`${2018}-08-21T16:45:00`} />
             </div>
             <div className="flight-info-container">
-              <FlightInfo />
+              <DepartingFlightInfo />
+            </div>
+            <div className="flight-info-separator"></div>
+              <span className='flight-separator-text'>August 22 - August 30</span>
+            <div className="flight-info-container">
+              <ReturningFlightInfo />
             </div>
           </div>
         </div>
