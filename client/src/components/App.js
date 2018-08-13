@@ -4,6 +4,7 @@ import HomePage from './HomePage.js'
 import NotFound from './NotFound.js'
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Route, withRouter, Switch } from "react-router-dom";
+import Todos from './Todos';
 
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
           <div>
             <Switch location={this.props.location}>
               <Route path="/" exact component={HomePage} />
+              <Route path="/todos" exact component={Todos} />
               <Route component={NotFound} />
             </Switch>
           </div>

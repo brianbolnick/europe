@@ -6,7 +6,7 @@ export default () => {
             <div className="flight-info-header">
                 <div className="header-left-group">
                     <div className="header-date">
-                        WED, AUG 21, 2018
+                        TUES, AUG 21, 2018
                     </div>
                     <div className="header-cities">
                         <span>SLC </span> <span><i className="fas fa-arrow-right"></i> </span> <span> DUB</span>
