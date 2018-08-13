@@ -14,22 +14,7 @@ class Day1 extends React.Component {
             <Slider {...settings}>
                 <div className='slide-container'>
                     <img className='slide-image' src={DublinDay1} alt="" />
-                </div>
-                <div>
-                    <h3>2</h3>
-                </div>
-                <div>
-                    <h3>3</h3>
-                </div>
-                <div>
-                    <h3>4</h3>
-                </div>
-                <div>
-                    <h3>5</h3>
-                </div>
-                <div>
-                    <h3>6</h3>
-                </div>
+                </div>                
             </Slider>
         );
     }
