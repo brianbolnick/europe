@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Countdown from './Countdown'
-import TodoItem from './common/TodoItem/TodoItem';
 import { connect } from 'react-redux'
 import { addNewTodo, fetchTodos, toggleTodoStatus } from '../actions/todoActions'
 import DepartingFlightInfo from './DepartingFlightInfo';
 import ReturningFlightInfo from './ReturningFlightInfo';
 import Day from './common/Day';
-import Day1 from './Day1';
+import Day1 from './dublin/Day1';
+import Day2 from './dublin/Day2';
 
 class HomePage extends Component {
 	render() {
@@ -32,10 +32,17 @@ class HomePage extends Component {
 					<div className="separator-container">
 						<div className="flight-info-separator"></div>
 					</div>
+					<Day date="THURS, AUG 23, 2018" location="DUBLIN">
+						<Day2 />
+					</Day>
+					<div className="separator-container">
+						<div className="flight-info-separator"></div>
+					</div>
 					<div className="flight-info-container">
 						<ReturningFlightInfo />
 					</div>
 				</div>
+				<div className="spacer"></div>
 			</div>
 		);
 	}
