@@ -5,6 +5,7 @@ import Brian from '../../img/london/brian_city_jet.png';
 import Ashley from '../../img/london/ashley_city_jet.png';
 import Sam from '../../img/london/sam_city_jet.png';
 import Jd from '../../img/london/jd_city_jet.png';
+import Abb from '../../img/london/london_abb.png';
 
 class Day3 extends React.Component {
     render() {
@@ -21,6 +22,9 @@ class Day3 extends React.Component {
             <Slider {...settings}>
                 <div className='slide-container'>
                     <img className='slide-image' src={LondonDay3} alt="" />
+                </div>
+                <div className='slide-container'>
+                    <img className='slide-image' src={Abb} alt="" />
                 </div>
                 <div className='slide-container'>
                     <img className='slide-image' src={Brian} alt="" />
