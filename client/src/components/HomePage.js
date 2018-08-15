@@ -7,6 +7,7 @@ import ReturningFlightInfo from './ReturningFlightInfo';
 import Day from './common/Day';
 import Day1 from './dublin/Day1';
 import Day2 from './dublin/Day2';
+import Day3 from './london/Day3';
 
 class HomePage extends Component {
 	render() {
@@ -34,6 +35,12 @@ class HomePage extends Component {
 					</div>
 					<Day date="THURS, AUG 23, 2018" location="DUBLIN">
 						<Day2 />
+					</Day>
+					<div className="separator-container">
+						<div className="flight-info-separator"></div>
+					</div>
+					<Day date="FRI, AUG 24, 2018" location="LONDON">
+						<Day3 />
 					</Day>
 					<div className="separator-container">
 						<div className="flight-info-separator"></div>
