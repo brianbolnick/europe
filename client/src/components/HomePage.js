@@ -12,6 +12,7 @@ import InterFlight from './InterFlight';
 import Day4 from './london/Day4';
 import Train from './Train';
 import Day5 from './paris/Day5';
+import Day6 from './paris/Day6';
 
 class HomePage extends Component {
 	render() {
@@ -69,6 +70,12 @@ class HomePage extends Component {
 					</div>
 					<Day date="SUN, AUG 26, 2018" location="PARIS">
 						<Day5 />
+					</Day>
+					<div className="separator-container">
+						<div className="flight-info-separator"></div>
+					</div>
+					<Day date="MON, AUG 27, 2018" location="PARIS">
+						<Day6 />
 					</Day>
 					<div className="separator-container">
 						<div className="flight-info-separator"></div>
