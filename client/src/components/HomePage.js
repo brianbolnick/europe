@@ -10,6 +10,8 @@ import Day2 from './dublin/Day2';
 import Day3 from './london/Day3';
 import InterFlight from './InterFlight';
 import Day4 from './london/Day4';
+import Train from './Train';
+import Day5 from './paris/Day5';
 
 class HomePage extends Component {
 	render() {
@@ -55,6 +57,18 @@ class HomePage extends Component {
 					</div>
 					<Day date="SAT, AUG 25, 2018" location="LONDON">
 						<Day4 />
+					</Day>
+					<div className="separator-container">
+						<div className="flight-info-separator"></div>
+					</div>
+					<div className="flight-info-container">
+						<Train />
+					</div>
+					<div className="separator-container">
+						<div className="flight-info-separator"></div>
+					</div>
+					<Day date="SUN, AUG 26, 2018" location="PARIS">
+						<Day5 />
 					</Day>
 					<div className="separator-container">
 						<div className="flight-info-separator"></div>
