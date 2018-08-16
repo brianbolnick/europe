@@ -11,8 +11,7 @@ class Day2 extends React.Component {
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
-            lazyLoad: true,
-            arrows: false            
+            lazyLoad: true           
         };
         return (
             <Slider {...settings}>

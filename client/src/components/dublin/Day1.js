@@ -10,8 +10,7 @@ class Day1 extends React.Component {
             infinite: true,
             speed: 500,
             slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false
+            slidesToScroll: 1
         };
         return (
             <Slider {...settings}>
