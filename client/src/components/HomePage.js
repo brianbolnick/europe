@@ -19,6 +19,8 @@ import Cloudy from '../img/cloud.png';
 import PartlyCloudy from '../img/partly-cloudy.png';
 import Rain from '../img/rain-cloud.png';
 import axios from 'axios';
+import Day8 from './paris/Day8';
+import Link from 'react-router-dom/Link';
 
 const DATE_MAP = {
 	"21 Aug 2018": "day0",
@@ -53,11 +55,16 @@ class HomePage extends Component {
 	}
 
 	getCondition = code => {
+		// eslint-disable-next-line
 		if ([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 35, 37, 38, 39, 40, 41, 42, 43, 45, 46, 47].includes(parseInt(code))) {
 			return Rain;
-		} else if (code == 44) {
+		} 
+		// eslint-disable-next-line
+		else if (code == 44) {
 			return PartlyCloudy
-		} else if ([26, 27, 28, 29, 30].includes(parseInt(code))) {
+		} 
+		// eslint-disable-next-line
+		else if ([26, 27, 28, 29, 30].includes(parseInt(code))) {
 			return Cloudy
 		} else {
 			return Sunny
@@ -125,6 +132,9 @@ class HomePage extends Component {
 			<div className="home-page">
 				<div className="spacer"></div>
 				<div className="itinerary-container">
+					<div className="link-container">
+						<Link to='/todos'>Todo List</Link>
+					</div>
 					<div className="countdown">
 						<Countdown date={`${2018}-08-21T16:45:00`} />
 					</div>
@@ -187,6 +197,12 @@ class HomePage extends Component {
 					</div>
 					<Day date="TUES, AUG 28, 2018" location="PARIS" weather={paris} day='day7'>
 						<Day7 />
+					</Day>
+					<div className="separator-container">
+						<div className="flight-info-separator"></div>
+					</div>
+					<Day date="WED, AUG 29, 2018" location="PARIS" weather={paris} day='day8'>
+						<Day8 />
 					</Day>
 					<div className="separator-container">
 						<div className="flight-info-separator"></div>

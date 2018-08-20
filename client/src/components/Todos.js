@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TodoItem from './common/TodoItem/TodoItem';
 import { connect } from 'react-redux'
 import { addNewTodo, fetchTodos, toggleTodoStatus } from '../actions/todoActions'
+import Link from 'react-router-dom/Link';
 
 class Todos extends Component {
     state = {
@@ -40,6 +41,9 @@ class Todos extends Component {
         return (
             <div className="home-page">
                 <div className="spacer"></div>
+                <div className="link-container">
+                    <Link to='/'>Home</Link>
+                </div>
                 <div className="container">
                     <div className="todos">
                         <div className="todo-container">
