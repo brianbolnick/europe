@@ -335,6 +335,11 @@ img.slide-image {
   width: 100%;
 }
 
+img.weather {
+  width: 40px;
+  vertical-align: bottom;
+}
+
 /* .slide-container {
   width: auto !important;
 } */

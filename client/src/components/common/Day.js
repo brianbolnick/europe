@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 class Day extends Component {
     render() {
+        const { day, weather } = this.props;
+        const current = weather[day];        
+
         return (
             <div className="flight-info-container">
                 <div className="flight-info">
@@ -13,8 +16,8 @@ class Day extends Component {
                         </div>
                         <div className="header-right-group">
                             <div className="confirmation">
-                                <div className="confirm-title">LOCATION</div>
-                                <div className="confirm-number">{this.props.location}</div>
+                                <div className="confirm-title">WEATHER</div>
+                                <div className="confirm-number">{current && current.high}/{current && current.low} <img className="weather" src={current && current.condition} alt="" /></div>
                             </div>
                         </div>
                     </div>
